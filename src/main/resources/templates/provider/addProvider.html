@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Insert title here</title>
+<meta charset="ISO-8859-1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Providers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384- MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> 
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-
+5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+crossorigin="anonymous">
+</head>
+<body style="margin:50px;">
+<h1 align="center">Create Provider</h1>
+
+   <table  style="margin-top:20px;">
+   <form th:action="@{/provider/add}" th:object="${provider}" method="POST">
+     <tr>
+        <th>Name : </th>
+        <td> <input type="text" th:field="*{name}" /></td>
+     </tr>
+     <tr>
+        <th>Adress : </th>
+        <td> <input type="text" th:field="*{adress}" /></td>
+      </tr>
+           <tr>
+        <th>Email : </th>
+        <td> <input type="text" th:field="*{email}" /></td>
+      </tr>
+      <tr>
+        <td><input style="margin-top:15px;" type="submit" value="Create" class="btn btn-success"/></td>
+      </tr>
+     </form>
+     </table>
+    
+</body>
+</html>
